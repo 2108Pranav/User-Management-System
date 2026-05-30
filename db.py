@@ -4,7 +4,6 @@ from config.settings import Config
 mysql_db = SQLAlchemy()
 
 db_string = f"mysql://{Config.DB_USER}:{Config.DB_PASSWORD}@{Config.DB_HOST}/{Config.DB_NAME}"
-# print(db_string)
 
 def initialized_db(app):
     """Use this function for initializing db."""

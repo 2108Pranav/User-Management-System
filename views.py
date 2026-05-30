@@ -7,7 +7,7 @@ class CreateAndRetrievesUserResource(MethodView):
     def get(self):
         try:
             data = User.query.all()
-            data = [{"id": user.id, "name": user.name, "email": user.email, "number": user.number} for user in data]
+            data = [{"id": user.id, "first_name": user.first_name, "email": user.email, "last_name": user.last_name} for user in data]
             return jsonify({"data": data, "message":"Data received success"})
         except Exception as e:
             return jsonify({"message": str(e)})
